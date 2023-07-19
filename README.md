@@ -1,5 +1,10 @@
 # Test_Flutter
 
+We have resolved this observation using state management with Getx and provider
+
+
+1) Using Getx
+
 The concern is: ListItem is a Stateful widget, which rebuilds every time it's appears on the screen (Once user scroll back to same number).
 
 How to achieve functionality: We can use any available state management solution i.e. GetX, Provider etc. and rather than adding widgets via list, use ListView for list of same widgets.
@@ -17,9 +22,7 @@ i.e. RxList<int> counterArray = List.generate(100, (index) => 0).obs; and for li
 
 
 
-
-
-
+2) Using Provider
 
 The concern is: ListItem is a Stateful widget, which rebuilds every time it's appears on the screen (Once user scroll back to same number).
 
