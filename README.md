@@ -3,7 +3,7 @@
 We have resolved this observation using two state managements with GetX and Provider. Detail of each state management is as below:
 
 
-1) GetX
+# **1) GetX**
 
 The concern is: ListItem is a Stateful widget, which rebuilds every time it's appears on the screen (Once user scroll back to same number).
 
@@ -22,7 +22,7 @@ i.e. RxList<int> counterArray = List.generate(100, (index) => 0).obs; and for li
 
 
 
-2) Provider
+# **2) Provider**
 
 The concern is: ListItem is a Stateful widget, which rebuilds every time it's appears on the screen (Once user scroll back to same number).
 
@@ -38,4 +38,12 @@ i.e. RxList<int> counterArray = List.generate(100, (index) => 0).obs; and for li
 7. Change MaterialButton with IconButton for better UI results.
 8. If you have already set background colour in your MaterialAPP(), you can remove Container and directly use Padding, set padding to enhance UX view.
 9. Use Safearea to avoid intrusions by the operating system (Notch / camera)
+
+------------------------------------------------------------------
+
+**Main issue** : We have a ListItem in Stateful Widget, which reloads everytime when user scroll and values gets resetted. 
+
+**Solution** : We have used GetX and Provider as a state management and we have used List instead of integer to manage our state, so the widget won't reload unnecessarily, it will reload only when state changes occur.
+
+------------------------------------------------------------------
 
